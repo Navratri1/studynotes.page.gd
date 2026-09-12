@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b5cff">
+<meta name="description" content="Study Notes - Punjab Board students के लिए Notes, Important Questions और Real Papers Discussion.">
+<title>Study Notes | Punjab Board Study Learning App</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f8ff;
+  color:#111827;
+  line-height:1.6;
+}
+a{text-decoration:none}
+.container{width:min(1100px,92%);margin:auto}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #e5e7eb;
+}
+.nav-inner{
+  min-height:70px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:#123b9d}
+.brand img{width:46px;height:46px;border-radius:13px;object-fit:cover}
+.nav-download{
+  background:#0b5cff;color:white;padding:11px 18px;
+  border-radius:12px;font-weight:700;
+}
+
+/* HERO */
+.hero{
+  background:
+    radial-gradient(circle at 15% 15%,rgba(255,255,255,.25),transparent 30%),
+    linear-gradient(135deg,#063db8,#0878ff 55%,#00a6ff);
+  color:white;padding:70px 0 80px;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:45px;
+}
+.badge{
+  display:inline-block;background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.35);
+  padding:7px 13px;border-radius:30px;font-weight:700;font-size:14px;
+  margin-bottom:18px;
+}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin-bottom:18px}
+.hero h1 span{color:#ffd21c}
+.hero p{font-size:19px;max-width:580px;color:#eaf2ff;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:14px 22px;border-radius:14px;font-weight:800;
+  transition:.2s;cursor:pointer;
+}
+.btn-primary{background:#ffd21c;color:#101828;box-shadow:0 10px 25px rgba(0,0,0,.18)}
+.btn-secondary{border:1px solid rgba(255,255,255,.5);color:white;background:rgba(255,255,255,.1)}
+.btn:hover{transform:translateY(-2px)}
+.hero-logo{
+  width:min(430px,90%);margin:auto;display:block;
+  border-radius:32px;box-shadow:0 25px 60px rgba(0,0,0,.28);
+  animation:float 4s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+/* STATS */
+.stats{margin-top:-35px;position:relative;z-index:5}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.stat{
+  background:white;border-radius:18px;padding:20px;text-align:center;
+  box-shadow:0 10px 30px rgba(20,50,100,.10);
+  border:1px solid #e7edf7;
+}
+.stat strong{display:block;font-size:25px;color:#0b5cff}
+.stat span{font-size:14px;color:#667085}
+
+/* SECTIONS */
+section{padding:75px 0}
+.section-title{text-align:center;max-width:700px;margin:0 auto 42px}
+.section-title .small{color:#0b5cff;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:13px}
+.section-title h2{font-size:clamp(28px,4vw,44px);margin:8px 0 10px}
+.section-title p{color:#667085;font-size:17px}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:white;padding:27px;border-radius:22px;
+  border:1px solid #e7edf7;box-shadow:0 12px 35px rgba(20,50,100,.07);
+  transition:.2s;
+}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(20,50,100,.12)}
+.icon{
+  width:55px;height:55px;border-radius:16px;background:#eaf1ff;
+  display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:18px;
+}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:#667085}
+
+.promo-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:45px;
+  align-items:center;
+}
+.promo-image{
+  width:100%;border-radius:24px;display:block;
+  box-shadow:0 18px 45px rgba(20,50,100,.18);
+}
+.checks{list-style:none;margin:24px 0}
+.checks li{margin:12px 0;font-weight:600}
+.checks li::before{content:"✓";display:inline-flex;align-items:center;justify-content:center;
+  width:25px;height:25px;border-radius:50%;background:#0b5cff;color:white;margin-right:10px;font-weight:900}
+
+.subjects{
+  background:linear-gradient(180deg,#eef5ff,#f8fbff);
+}
+.subject-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.subject{
+  background:white;border:1px solid #dfe8f7;padding:17px;border-radius:16px;
+  font-weight:700;text-align:center;
+}
+.subject span{display:block;font-size:28px;margin-bottom:4px}
+
+.cta{
+  padding:70px 0;background:linear-gradient(135deg,#071f61,#0b5cff);
+  color:white;text-align:center;
+}
+.cta h2{font-size:clamp(30px,5vw,50px);margin-bottom:12px}
+.cta p{color:#dce8ff;max-width:650px;margin:0 auto 25px;font-size:17px}
+
+footer{
+  background:#07111f;color:#b9c4d5;text-align:center;padding:30px 15px;
+}
+footer strong{color:white}
+.footer-links{margin-top:8px;font-size:14px}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .hero{padding:50px 0 65px}
+  .hero-grid,.promo-wrap{grid-template-columns:1fr}
+  .hero-copy{text-align:center}
+  .hero-copy p{margin-left:auto;margin-right:auto}
+  .buttons{justify-content:center}
+  .hero-logo{max-width:330px}
+  .features{grid-template-columns:1fr}
+  .subject-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+  .nav-download{padding:9px 12px;font-size:13px}
+  .brand{font-size:17px}
+  .brand img{width:40px;height:40px}
+  .stats-grid{grid-template-columns:1fr}
+  section{padding:55px 0}
+  .subject-grid{grid-template-columns:1fr 1fr}
+  .card{padding:22px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">
+      <img src="logo.png" alt="Study Notes Logo">
+      <span>Study Notes</span>
+    </a>
+    <a class="nav-download" href="https://drive.google.com/file/d/10Nhx5WoRqa8h3-dIwRtfYfbEr0R5JKDs/view?usp=drivesdk" target="_blank" rel="noopener">
+      📲 Download App
+    </a>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="badge">🎓 Punjab Board • Study Learning App</div>
+      <h1>पढ़ाई को बनाओ <span>Smart & Easy</span></h1>
+      <p>
+        Study Notes एक student-friendly learning app है जहाँ Punjab Board
+        के students को Notes, Important Questions, Exam Material और
+        Real Papers Discussion जैसी जरूरी चीजें एक जगह मिलती हैं।
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/10Nhx5WoRqa8h3-dIwRtfYfbEr0R5JKDs/view?usp=drivesdk" target="_blank" rel="noopener">
+          📥 Download Study Notes
+        </a>
+        <a class="btn btn-secondary" href="#features">✨ App Features</a>
+      </div>
+    </div>
+
+    <div>
+      <img class="hero-logo" src="logo.png" alt="My Study Notes App Logo">
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><strong>📚 Notes</strong><span>Study Material एक जगह</span></div>
+    <div class="stat"><strong>📝 Papers</strong><span>Real Papers Discussion</span></div>
+    <div class="stat"><strong>🎯 Exam Focus</strong><span>Important चीजों पर फोकस</span></div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="container">
+    <div class="section-title">
+      <div class="small">WHY STUDY NOTES?</div>
+      <h2>Students के लिए जरूरी सब कुछ</h2>
+      <p>अपनी पढ़ाई के लिए useful study content को एक ही जगह पर आसानी से explore करें।</p>
+    </div>
+
+    <div class="features">
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Complete Notes</h3>
+        <p>अलग-अलग chapters और topics के लिए जरूरी notes और study material एक जगह।</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>Real Papers Discussion</h3>
+        <p>Students के लिए real papers से जुड़े important questions और discussion material।</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Exam Important Content</h3>
+        <p>Exam preparation के लिए important questions और useful learning content पर focus।</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h3>Chapter-wise Learning</h3>
+        <p>अपने subject और chapter के हिसाब से पढ़ाई का material ढूँढना आसान।</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Student Friendly</h3>
+        <p>Mobile पर आसानी से इस्तेमाल करने के लिए simple और clean experience।</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Important Resources</h3>
+        <p>पढ़ाई के दौरान काम आने वाली important resources को एक जगह access करें।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container promo-wrap">
+    <div>
+      <img class="promo-image" src="promo.png" alt="Study Notes Promotion">
+    </div>
+
+    <div>
+      <div class="section-title" style="text-align:left;margin:0 0 15px">
+        <div class="small">STUDY • PREPARE • IMPROVE</div>
+        <h2>अपने दोस्तों के साथ भी Share करें</h2>
+        <p>
+          अगर आपके friends भी Punjab Board की पढ़ाई कर रहे हैं,
+          तो Study Notes को उनके साथ share करें ताकि वे भी useful
+          study material तक पहुँच सकें।
+        </p>
+      </div>
+
+      <ul class="checks">
+        <li>Punjab Board Students के लिए बनाया गया</li>
+        <li>Notes और important study material</li>
+        <li>Real Papers Discussion</li>
+        <li>Exam preparation में helpful resources</li>
+      </ul>
+
+      <a class="btn btn-primary" href="https://drive.google.com/file/d/10Nhx5WoRqa8h3-dIwRtfYfbEr0R5JKDs/view?usp=drivesdk" target="_blank" rel="noopener">
+        📲 Study Notes Download करें
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="subjects">
+  <div class="container">
+    <div class="section-title">
+      <div class="small">STUDY MATERIAL</div>
+      <h2>अपने Subjects की तैयारी करें</h2>
+      <p>अपने syllabus के अनुसार जरूरी chapters और study content पर focus करें।</p>
+    </div>
+
+    <div class="subject-grid">
+      <div class="subject"><span>📘</span>Subject Notes</div>
+      <div class="subject"><span>📕</span>Chapter Material</div>
+      <div class="subject"><span>📝</span>Important Questions</div>
+      <div class="subject"><span>📄</span>Real Papers</div>
+      <div class="subject"><span>🎓</span>Exam Preparation</div>
+      <div class="subject"><span>📚</span>Study Resources</div>
+      <div class="subject"><span>⭐</span>Important Topics</div>
+      <div class="subject"><span>💡</span>Useful Discussion</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Study Smarter? 🚀</h2>
+    <p>
+      Study Notes के साथ अपनी Punjab Board preparation को आसान बनाइए।
+      App डाउनलोड करें और जरूरी study material explore करें।
+    </p>
+    <a class="btn btn-primary" href="https://drive.google.com/file/d/10Nhx5WoRqa8h3-dIwRtfYfbEr0R5JKDs/view?usp=drivesdk" target="_blank" rel="noopener">
+      📥 DOWNLOAD STUDY NOTES
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div><strong>Study Notes</strong> — Punjab Board Study Learning App</div>
+  <div class="footer-links">📚 Notes • 📝 Real Papers Discussion • 🎓 Exam Preparation</div>
+  <div style="margin-top:12px;font-size:13px">© 2026 Study Notes. All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
