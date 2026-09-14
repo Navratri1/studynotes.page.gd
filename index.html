@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0759e8">
+<meta name="theme-color" content="#071426">
 
-<title>Study Notes - Punjab Board Study App</title>
+<title>My StudyNotes - Punjab Board Study App</title>
 
 <style>
 *{
@@ -18,8 +18,8 @@ html{scroll-behavior:smooth;}
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f5f8ff;
-    color:#111827;
+    background:#f7f8fa;
+    color:#101828;
     line-height:1.6;
     overflow-x:hidden;
 }
@@ -32,7 +32,22 @@ a{text-decoration:none;}
     margin:auto;
 }
 
-/* ADS */
+/* ================= PREMIUM COLORS ================= */
+
+:root{
+    --navy:#071426;
+    --navy2:#0d2038;
+    --navy3:#102b49;
+    --gold:#d8aa42;
+    --gold-light:#f0d477;
+    --gold-soft:#fff7df;
+    --white:#ffffff;
+    --text:#101828;
+    --muted:#667085;
+}
+
+/* ================= ADS ================= */
+
 .ad-container{
     width:100%;
     min-height:60px;
@@ -49,32 +64,33 @@ a{text-decoration:none;}
 }
 
 .ad-top{
-    background:#f5f8ff;
+    background:#f7f8fa;
     margin-top:0;
     margin-bottom:0;
     padding-top:8px;
 }
 
 .ad-between{
-    background:#f5f8ff;
+    background:#f7f8fa;
     margin:0 auto;
     padding:12px 8px;
 }
 
 .ad-bottom{
-    background:#f5f8ff;
+    background:#f7f8fa;
     margin:0 auto;
     padding:14px 8px 22px;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar{
     position:sticky;
     top:0;
     z-index:9999;
-    background:rgba(255,255,255,.97);
+    background:rgba(7,20,38,.96);
     backdrop-filter:blur(15px);
-    border-bottom:1px solid #e5e7eb;
+    border-bottom:1px solid rgba(216,170,66,.25);
 }
 
 .navbar-inner{
@@ -89,7 +105,7 @@ a{text-decoration:none;}
     display:flex;
     align-items:center;
     gap:10px;
-    color:#123b9d;
+    color:#f0d477;
     font-size:21px;
     font-weight:800;
 }
@@ -108,24 +124,48 @@ a{text-decoration:none;}
 }
 
 .nav-btn{
-    color:white;
+    color:#071426;
     padding:10px 15px;
     border-radius:12px;
     font-weight:800;
-    background:#0759e8;
+    background:linear-gradient(135deg,#d8aa42,#f0d477);
+    transition:.25s;
 }
 
-.whatsapp-btn{background:#16a34a;}
+.nav-btn:hover{
+    transform:translateY(-2px);
+}
 
-/* HERO */
+.whatsapp-btn{
+    background:#20c463;
+    color:white;
+}
+
+/* ================= HERO ================= */
+
 .hero{
     position:relative;
     overflow:hidden;
     color:white;
     padding:75px 0 90px;
+
     background:
-    radial-gradient(circle at 10% 20%,rgba(255,255,255,.20),transparent 30%),
-    linear-gradient(135deg,#052e91,#0759e8,#00a9ed);
+    radial-gradient(
+        circle at 10% 20%,
+        rgba(216,170,66,.18),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 90% 80%,
+        rgba(255,255,255,.06),
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #050d19,
+        #071426,
+        #102b49
+    );
 }
 
 .hero-grid{
@@ -141,8 +181,11 @@ a{text-decoration:none;}
     display:inline-block;
     padding:8px 15px;
     border-radius:30px;
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.30);
+
+    background:rgba(216,170,66,.12);
+    border:1px solid rgba(216,170,66,.40);
+
+    color:#f0d477;
     font-size:14px;
     font-weight:700;
     margin-bottom:18px;
@@ -154,11 +197,13 @@ a{text-decoration:none;}
     margin-bottom:20px;
 }
 
-.hero h1 span{color:#ffd21c;}
+.hero h1 span{
+    color:#f0d477;
+}
 
 .hero-text{
     max-width:590px;
-    color:#eaf3ff;
+    color:#d5deea;
     font-size:19px;
     margin-bottom:28px;
 }
@@ -181,12 +226,22 @@ a{text-decoration:none;}
     cursor:pointer;
 }
 
-.btn:hover{transform:translateY(-3px);}
+.btn:hover{
+    transform:translateY(-3px);
+}
 
 .btn-download{
-    background:#ffd21c;
-    color:#101828;
-    box-shadow:0 12px 28px rgba(0,0,0,.20);
+    background:linear-gradient(
+        135deg,
+        #d8aa42,
+        #f0d477
+    );
+
+    color:#071426;
+
+    box-shadow:
+    0 12px 28px rgba(0,0,0,.25),
+    0 0 25px rgba(216,170,66,.12);
 }
 
 .btn-whatsapp{
@@ -195,9 +250,9 @@ a{text-decoration:none;}
 }
 
 .btn-outline{
-    color:white;
-    border:1px solid rgba(255,255,255,.5);
-    background:rgba(255,255,255,.10);
+    color:#f0d477;
+    border:1px solid rgba(216,170,66,.55);
+    background:rgba(216,170,66,.07);
 }
 
 .hero-logo{
@@ -205,16 +260,26 @@ a{text-decoration:none;}
     display:block;
     margin:auto;
     border-radius:32px;
-    box-shadow:0 25px 65px rgba(0,0,0,.30);
+
+    box-shadow:
+    0 25px 65px rgba(0,0,0,.45),
+    0 0 45px rgba(216,170,66,.08);
+
     animation:floatLogo 4s ease-in-out infinite;
 }
 
 @keyframes floatLogo{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-10px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
 }
 
-/* STATS */
+/* ================= STATS ================= */
+
 .stats{
     position:relative;
     z-index:10;
@@ -232,15 +297,20 @@ a{text-decoration:none;}
     border-radius:20px;
     padding:21px;
     text-align:center;
-    border:1px solid #e3eaf5;
-    box-shadow:0 12px 35px rgba(18,55,110,.10);
+
+    border:1px solid #eadfbf;
+
+    box-shadow:
+    0 12px 35px rgba(7,20,38,.10);
 }
 
-.stat-icon{font-size:25px;}
+.stat-icon{
+    font-size:25px;
+}
 
 .stat strong{
     display:block;
-    color:#0759e8;
+    color:#a77a16;
     font-size:23px;
 }
 
@@ -249,8 +319,11 @@ a{text-decoration:none;}
     font-size:14px;
 }
 
-/* SECTIONS */
-section{padding:80px 0;}
+/* ================= SECTIONS ================= */
+
+section{
+    padding:80px 0;
+}
 
 .section-heading{
     max-width:720px;
@@ -259,7 +332,7 @@ section{padding:80px 0;}
 }
 
 .section-label{
-    color:#0759e8;
+    color:#a77a16;
     font-size:13px;
     font-weight:900;
     letter-spacing:1.2px;
@@ -276,7 +349,8 @@ section{padding:80px 0;}
     font-size:17px;
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
+
 .features-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -285,26 +359,41 @@ section{padding:80px 0;}
 
 .feature-card{
     background:white;
-    border:1px solid #e5ebf5;
+
+    border:1px solid #e8dfc7;
+
     border-radius:23px;
     padding:28px;
-    box-shadow:0 12px 35px rgba(20,50,100,.07);
+
+    box-shadow:
+    0 12px 35px rgba(7,20,38,.07);
+
     transition:.25s;
 }
 
 .feature-card:hover{
     transform:translateY(-7px);
-    box-shadow:0 20px 45px rgba(20,50,100,.13);
+
+    border-color:#d8aa42;
+
+    box-shadow:
+    0 20px 45px rgba(7,20,38,.13);
 }
 
 .feature-icon{
     width:58px;
     height:58px;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#eaf2ff;
+
+    background:#fff7df;
+
+    border:1px solid #ead69b;
+
     border-radius:17px;
+
     font-size:29px;
     margin-bottom:18px;
 }
@@ -314,10 +403,15 @@ section{padding:80px 0;}
     margin-bottom:9px;
 }
 
-.feature-card p{color:#667085;}
+.feature-card p{
+    color:#667085;
+}
 
-/* PROMO */
-.promo{background:white;}
+/* ================= PROMO ================= */
+
+.promo{
+    background:#ffffff;
+}
 
 .promo-grid{
     display:grid;
@@ -330,7 +424,9 @@ section{padding:80px 0;}
     width:100%;
     display:block;
     border-radius:25px;
-    box-shadow:0 20px 50px rgba(20,50,100,.16);
+
+    box-shadow:
+    0 20px 50px rgba(7,20,38,.16);
 }
 
 .promo-content .section-heading{
@@ -350,21 +446,37 @@ section{padding:80px 0;}
 
 .promo-list li::before{
     content:"✓";
+
     width:26px;
     height:26px;
+
     display:inline-flex;
     justify-content:center;
     align-items:center;
+
     border-radius:50%;
-    background:#0759e8;
-    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #d8aa42,
+        #f0d477
+    );
+
+    color:#071426;
+
     margin-right:10px;
     font-weight:900;
 }
 
-/* MATERIAL */
+/* ================= MATERIAL ================= */
+
 .material{
-    background:linear-gradient(180deg,#eef5ff,#f8fbff);
+    background:
+    linear-gradient(
+        180deg,
+        #f5f1e7,
+        #fafafa
+    );
 }
 
 .material-grid{
@@ -375,17 +487,27 @@ section{padding:80px 0;}
 
 .material-card{
     background:white;
+
     padding:20px 15px;
+
     border-radius:18px;
-    border:1px solid #dfe8f7;
+
+    border:1px solid #e8dfc7;
+
     text-align:center;
+
     font-weight:800;
+
     transition:.2s;
 }
 
 .material-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(20,50,100,.10);
+
+    border-color:#d8aa42;
+
+    box-shadow:
+    0 12px 30px rgba(7,20,38,.10);
 }
 
 .material-card .emoji{
@@ -394,18 +516,38 @@ section{padding:80px 0;}
     margin-bottom:7px;
 }
 
-/* DOWNLOAD */
-.download-section{background:white;}
+/* ================= DOWNLOAD ================= */
+
+.download-section{
+    background:white;
+}
 
 .download-box{
     text-align:center;
+
     padding:55px 25px;
+
     border-radius:30px;
+
     background:
-    radial-gradient(circle at top right,rgba(255,255,255,.20),transparent 35%),
-    linear-gradient(135deg,#062d91,#0759e8);
+    radial-gradient(
+        circle at top right,
+        rgba(216,170,66,.18),
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #050d19,
+        #071426,
+        #102b49
+    );
+
     color:white;
-    box-shadow:0 25px 60px rgba(7,89,232,.20);
+
+    border:1px solid rgba(216,170,66,.25);
+
+    box-shadow:
+    0 25px 60px rgba(7,20,38,.20);
 }
 
 .download-box h2{
@@ -416,7 +558,9 @@ section{padding:80px 0;}
 .download-box p{
     max-width:680px;
     margin:0 auto 27px;
-    color:#dce9ff;
+
+    color:#d5deea;
+
     font-size:17px;
 }
 
@@ -427,16 +571,22 @@ section{padding:80px 0;}
     gap:12px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
-    background:#07111f;
+    background:#050d19;
+
     color:#aebbd0;
+
     text-align:center;
+
     padding:35px 15px;
+
+    border-top:1px solid rgba(216,170,66,.20);
 }
 
 .footer-title{
-    color:white;
+    color:#f0d477;
     font-size:20px;
     font-weight:800;
     margin-bottom:8px;
@@ -449,22 +599,31 @@ footer{
 
 .footer-whatsapp{
     display:inline-flex;
+
     margin-top:15px;
+
     background:#20c463;
     color:white;
+
     padding:11px 18px;
+
     border-radius:12px;
+
     font-weight:800;
 }
 
 .copyright{
     margin-top:15px;
+
     font-size:13px;
+
     color:#718096;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width:850px){
+
     .hero-grid{
         grid-template-columns:1fr;
         text-align:center;
@@ -475,70 +634,119 @@ footer{
         margin-right:auto;
     }
 
-    .hero-buttons{justify-content:center;}
+    .hero-buttons{
+        justify-content:center;
+    }
 
-    .hero-logo{max-width:340px;}
+    .hero-logo{
+        max-width:340px;
+    }
 
-    .features-grid{grid-template-columns:1fr 1fr;}
+    .features-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-    .promo-grid{grid-template-columns:1fr;}
+    .promo-grid{
+        grid-template-columns:1fr;
+    }
 
-    .promo-content{text-align:center;}
+    .promo-content{
+        text-align:center;
+    }
 
-    .promo-content .section-heading{text-align:center;}
+    .promo-content .section-heading{
+        text-align:center;
+    }
 
     .promo-list{
         text-align:left;
         display:inline-block;
     }
 
-    .material-grid{grid-template-columns:repeat(2,1fr);}
+    .material-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 @media(max-width:600px){
-    .navbar-inner{min-height:65px;}
 
-    .brand{font-size:17px;}
+    .navbar-inner{
+        min-height:65px;
+    }
+
+    .brand{
+        font-size:17px;
+    }
 
     .brand img{
         width:41px;
         height:41px;
     }
 
-    .nav-buttons{gap:5px;}
+    .nav-buttons{
+        gap:5px;
+    }
 
     .nav-btn{
         padding:8px 10px;
         font-size:12px;
     }
 
-    .hero{padding:55px 0 75px;}
+    .hero{
+        padding:55px 0 75px;
+    }
 
-    .hero h1{font-size:42px;}
+    .hero h1{
+        font-size:42px;
+    }
 
-    .hero-text{font-size:17px;}
+    .hero-text{
+        font-size:17px;
+    }
 
-    .stats{margin-top:-25px;}
+    .stats{
+        margin-top:-25px;
+    }
 
-    .stats-grid{grid-template-columns:1fr;}
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
 
-    section{padding:60px 0;}
+    section{
+        padding:60px 0;
+    }
 
-    .features-grid{grid-template-columns:1fr;}
+    .features-grid{
+        grid-template-columns:1fr;
+    }
 
-    .material-grid{grid-template-columns:1fr 1fr;}
+    .material-grid{
+        grid-template-columns:1fr 1fr;
+    }
 
-    .promo-grid{gap:30px;}
+    .promo-grid{
+        gap:30px;
+    }
 
-    .promo-image{border-radius:20px;}
+    .promo-image{
+        border-radius:20px;
+    }
 
-    .btn{width:100%;}
+    .btn{
+        width:100%;
+    }
 
-    .hero-buttons{width:100%;}
+    .hero-buttons{
+        width:100%;
+    }
 
-    .download-box{padding:45px 18px;}
+    .download-box{
+        padding:45px 18px;
+    }
 
-    .download-buttons{width:100%;}
+    .download-buttons{
+        width:100%;
+    }
 
     .ad-container{
         margin-left:auto;
@@ -548,7 +756,10 @@ footer{
 }
 
 @media(max-width:380px){
-    .material-grid{grid-template-columns:1fr;}
+
+    .material-grid{
+        grid-template-columns:1fr;
+    }
 }
 </style>
 </head>
@@ -556,6 +767,7 @@ footer{
 <body>
 
 <!-- ================= TOP AD ================= -->
+
 <div class="ad-container ad-top">
 <script>
   atOptions = {
@@ -566,103 +778,167 @@ footer{
     'params' : {}
   };
 </script>
+
 <script src="https://www.highrevenueformat.com/1c62f5705a2eacde18f945d04797fb7a/invoke.js"></script>
 </div>
 
+
 <!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
+
 <div class="container navbar-inner">
 
 <a href="#home" class="brand">
-<img src="logo.png" alt="Study Notes Logo">
-<span>Study Notes</span>
+
+<img src="logo.png" alt="My StudyNotes Logo">
+
+<span>My StudyNotes</span>
+
 </a>
 
 <div class="nav-buttons">
+
 <a class="nav-btn whatsapp-btn"
 href="https://whatsapp.com/channel/0029Vb8U34dChq6VTHyJBa13"
-target="_blank" rel="noopener">
+target="_blank"
+rel="noopener">
+
 💬 WhatsApp
+
 </a>
 
 <a class="nav-btn"
-href="https://files.catbox.moe/mjnxut.apk">
+href="YOUR_APK_DOWNLOAD_LINK_HERE">
+
 📲 Download
+
 </a>
+
 </div>
 
 </div>
+
 </header>
 
+
 <!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
 <div class="container hero-grid">
 
 <div>
-<div class="badge">🎓 Punjab Board • Study Learning App</div>
 
-<h1>पढ़ाई को बनाओ <span>Smart & Easy</span></h1>
+<div class="badge">
+🎓 Punjab Board • My StudyNotes
+</div>
+
+<h1>
+पढ़ाई को बनाओ <span>Smart & Easy</span>
+</h1>
 
 <p class="hero-text">
+
 Study Notes एक student-friendly learning app है
 जहाँ Punjab Board के students के लिए Notes,
 Important Questions, Exam Material और
 Real Papers Discussion जैसी जरूरी चीजें
 एक ही जगह मिलती हैं।
+
 </p>
 
 <div class="hero-buttons">
+
 <a class="btn btn-download"
-href="https://files.catbox.moe/mjnxut.apk">
-📥 Download Study Notes
+href="YOUR_APK_DOWNLOAD_LINK_HERE">
+
+📥 Download My StudyNotes
+
 </a>
 
 <a class="btn btn-whatsapp"
 href="https://whatsapp.com/channel/0029Vb8U34dChq6VTHyJBa13"
-target="_blank" rel="noopener">
+target="_blank"
+rel="noopener">
+
 💬 Join WhatsApp Channel
+
 </a>
 
-<a class="btn btn-outline" href="#features">
+<a class="btn btn-outline"
+href="#features">
+
 ✨ App Features
+
 </a>
+
 </div>
+
 </div>
+
 
 <div>
-<img class="hero-logo" src="logo.png" alt="Study Notes App">
+
+<img
+class="hero-logo"
+src="logo.png"
+alt="My StudyNotes App">
+
 </div>
 
 </div>
+
 </section>
 
+
 <!-- ================= STATS ================= -->
+
 <div class="stats">
+
 <div class="container stats-grid">
 
 <div class="stat">
+
 <div class="stat-icon">📚</div>
+
 <strong>Notes</strong>
+
 <span>Useful Study Material</span>
+
 </div>
 
+
 <div class="stat">
+
 <div class="stat-icon">📝</div>
+
 <strong>Real Papers</strong>
+
 <span>Paper Discussion</span>
+
 </div>
+
 
 <div class="stat">
+
 <div class="stat-icon">🎯</div>
+
 <strong>Exam Focus</strong>
+
 <span>Important Preparation</span>
+
 </div>
 
 </div>
+
 </div>
+
 
 <!-- ================= AD 2 ================= -->
+
 <div class="ad-container ad-between">
+
 <script>
   atOptions = {
     'key' : '1c62f5705a2eacde18f945d04797fb7a',
@@ -672,63 +948,139 @@ target="_blank" rel="noopener">
     'params' : {}
   };
 </script>
+
 <script src="https://www.highrevenueformat.com/1c62f5705a2eacde18f945d04797fb7a/invoke.js"></script>
+
 </div>
 
+
 <!-- ================= FEATURES ================= -->
+
 <section id="features">
+
 <div class="container">
 
 <div class="section-heading">
-<div class="section-label">WHY STUDY NOTES?</div>
-<h2>Students के लिए जरूरी सब कुछ</h2>
-<p>अपनी Punjab Board preparation के लिए useful study material एक ही जगह पाएँ।</p>
+
+<div class="section-label">
+WHY MY STUDYNOTES?
 </div>
+
+<h2>
+Students के लिए जरूरी सब कुछ
+</h2>
+
+<p>
+अपनी Punjab Board preparation के लिए useful study material एक ही जगह पाएँ।
+</p>
+
+</div>
+
 
 <div class="features-grid">
 
+
 <div class="feature-card">
+
 <div class="feature-icon">📚</div>
-<h3>Complete Notes</h3>
-<p>अलग-अलग chapters और topics के लिए जरूरी notes और study material।</p>
+
+<h3>
+Complete Notes
+</h3>
+
+<p>
+अलग-अलग chapters और topics के लिए जरूरी notes और study material।
+</p>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="feature-icon">📝</div>
-<h3>Real Papers Discussion</h3>
-<p>Real papers से जुड़े important questions और useful discussion material।</p>
+
+<h3>
+Real Papers Discussion
+</h3>
+
+<p>
+Real papers से जुड़े important questions और useful discussion material।
+</p>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="feature-icon">🎯</div>
-<h3>Important Questions</h3>
-<p>Exam preparation के लिए जरूरी questions और important topics।</p>
+
+<h3>
+Important Questions
+</h3>
+
+<p>
+Exam preparation के लिए जरूरी questions और important topics।
+</p>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="feature-icon">📖</div>
-<h3>Chapter-wise Material</h3>
-<p>अपने subject और chapter के अनुसार study material आसानी से ढूँढें।</p>
+
+<h3>
+Chapter-wise Material
+</h3>
+
+<p>
+अपने subject और chapter के अनुसार study material आसानी से ढूँढें।
+</p>
+
 </div>
 
+
 <div class="feature-card">
+
 <div class="feature-icon">🎓</div>
-<h3>Punjab Board Focus</h3>
-<p>Punjab Board students की जरूरतों को ध्यान में रखकर बनाया गया platform।</p>
+
+<h3>
+Punjab Board Focus
+</h3>
+
+<p>
+Punjab Board students की जरूरतों को ध्यान में रखकर बनाया गया platform।
+</p>
+
 </div>
+
 
 <div class="feature-card">
+
 <div class="feature-icon">📱</div>
-<h3>Student Friendly</h3>
-<p>Mobile पर simple और easy-to-use study experience।</p>
+
+<h3>
+Student Friendly
+</h3>
+
+<p>
+Mobile पर simple और easy-to-use study experience।
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
 <!-- ================= AD 3 ================= -->
+
 <div class="ad-container ad-between">
+
 <script>
   atOptions = {
     'key' : '1c62f5705a2eacde18f945d04797fb7a',
@@ -738,23 +1090,40 @@ target="_blank" rel="noopener">
     'params' : {}
   };
 </script>
+
 <script src="https://www.highrevenueformat.com/1c62f5705a2eacde18f945d04797fb7a/invoke.js"></script>
+
 </div>
+
 
 <!-- ================= PROMO ================= -->
+
 <section class="promo">
+
 <div class="container promo-grid">
 
+
 <div>
-<img class="promo-image" src="promo.png" alt="Study Notes Promotion">
+
+<img
+class="promo-image"
+src="promo.png"
+alt="My StudyNotes Promotion">
+
 </div>
 
+
 <div class="promo-content">
+
 <div class="section-heading">
 
-<div class="section-label">STUDY • PREPARE • IMPROVE</div>
+<div class="section-label">
+STUDY • PREPARE • IMPROVE
+</div>
 
-<h2>Study Notes को अपने दोस्तों के साथ Share करें</h2>
+<h2>
+Study Notes को अपने दोस्तों के साथ Share करें
+</h2>
 
 <p>
 अगर आपके दोस्त भी Punjab Board की पढ़ाई कर रहे हैं,
@@ -763,51 +1132,124 @@ target="_blank" rel="noopener">
 
 </div>
 
+
 <ul class="promo-list">
-<li>Punjab Board Students के लिए</li>
-<li>Notes और Study Material</li>
-<li>Real Papers Discussion</li>
-<li>Important Questions</li>
-<li>Exam Preparation Resources</li>
+
+<li>
+Punjab Board Students के लिए
+</li>
+
+<li>
+Notes और Study Material
+</li>
+
+<li>
+Real Papers Discussion
+</li>
+
+<li>
+Important Questions
+</li>
+
+<li>
+Exam Preparation Resources
+</li>
+
 </ul>
+
 
 <a class="btn btn-whatsapp"
 href="https://whatsapp.com/channel/0029Vb8U34dChq6VTHyJBa13"
-target="_blank" rel="noopener">
+target="_blank"
+rel="noopener">
+
 💬 WhatsApp Channel Join करें
+
 </a>
+
 </div>
 
 </div>
+
 </section>
 
+
 <!-- ================= MATERIAL ================= -->
+
 <section class="material">
+
 <div class="container">
 
 <div class="section-heading">
-<div class="section-label">STUDY MATERIAL</div>
-<h2>अपने Subjects की तैयारी करें</h2>
-<p>अपनी पढ़ाई के लिए जरूरी content और resources पर focus करें।</p>
+
+<div class="section-label">
+STUDY MATERIAL
 </div>
+
+<h2>
+अपने Subjects की तैयारी करें
+</h2>
+
+<p>
+अपनी पढ़ाई के लिए जरूरी content और resources पर focus करें।
+</p>
+
+</div>
+
 
 <div class="material-grid">
 
-<div class="material-card"><span class="emoji">📘</span>Subject Notes</div>
-<div class="material-card"><span class="emoji">📕</span>Chapter Material</div>
-<div class="material-card"><span class="emoji">📝</span>Important Questions</div>
-<div class="material-card"><span class="emoji">📄</span>Real Papers</div>
-<div class="material-card"><span class="emoji">🎓</span>Exam Preparation</div>
-<div class="material-card"><span class="emoji">📚</span>Study Resources</div>
-<div class="material-card"><span class="emoji">⭐</span>Important Topics</div>
-<div class="material-card"><span class="emoji">💡</span>Useful Discussion</div>
+<div class="material-card">
+<span class="emoji">📘</span>
+Subject Notes
+</div>
+
+<div class="material-card">
+<span class="emoji">📕</span>
+Chapter Material
+</div>
+
+<div class="material-card">
+<span class="emoji">📝</span>
+Important Questions
+</div>
+
+<div class="material-card">
+<span class="emoji">📄</span>
+Real Papers
+</div>
+
+<div class="material-card">
+<span class="emoji">🎓</span>
+Exam Preparation
+</div>
+
+<div class="material-card">
+<span class="emoji">📚</span>
+Study Resources
+</div>
+
+<div class="material-card">
+<span class="emoji">⭐</span>
+Important Topics
+</div>
+
+<div class="material-card">
+<span class="emoji">💡</span>
+Useful Discussion
+</div>
 
 </div>
+
 </div>
+
 </section>
 
+
 <!-- ================= AD 4 ================= -->
+
 <div class="ad-container ad-between">
+
 <script>
   atOptions = {
     'key' : '1c62f5705a2eacde18f945d04797fb7a',
@@ -817,15 +1259,23 @@ target="_blank" rel="noopener">
     'params' : {}
   };
 </script>
+
 <script src="https://www.highrevenueformat.com/1c62f5705a2eacde18f945d04797fb7a/invoke.js"></script>
+
 </div>
 
+
 <!-- ================= DOWNLOAD ================= -->
+
 <section class="download-section">
+
 <div class="container">
 
 <div class="download-box">
-<h2>Study Smarter with Study Notes 🚀</h2>
+
+<h2>
+Study Smarter with My StudyNotes 🚀
+</h2>
 
 <p>
 Punjab Board की preparation को आसान बनाइए।
@@ -833,27 +1283,39 @@ Notes, Important Questions, Real Papers Discussion
 और जरूरी study material एक ही app में पाएँ।
 </p>
 
+
 <div class="download-buttons">
 
 <a class="btn btn-download"
-href="https://files.catbox.moe/mjnxut.apk">
-📥 DOWNLOAD STUDY NOTES APK
+href="YOUR_APK_DOWNLOAD_LINK_HERE">
+
+📥 DOWNLOAD MY STUDYNOTES APK
+
 </a>
+
 
 <a class="btn btn-whatsapp"
 href="https://whatsapp.com/channel/0029Vb8U34dChq6VTHyJBa13"
-target="_blank" rel="noopener">
+target="_blank"
+rel="noopener">
+
 💬 JOIN WHATSAPP CHANNEL
+
 </a>
 
 </div>
+
 </div>
 
 </div>
+
 </section>
 
+
 <!-- ================= BOTTOM AD ================= -->
+
 <div class="ad-container ad-bottom">
+
 <script>
   atOptions = {
     'key' : '1c62f5705a2eacde18f945d04797fb7a',
@@ -863,31 +1325,49 @@ target="_blank" rel="noopener">
     'params' : {}
   };
 </script>
+
 <script src="https://www.highrevenueformat.com/1c62f5705a2eacde18f945d04797fb7a/invoke.js"></script>
+
 </div>
+
 
 <!-- ================= FOOTER ================= -->
+
 <footer>
 
-<div class="footer-title">📚 Study Notes</div>
+<div class="footer-title">
+📚 My StudyNotes
+</div>
 
 <div class="footer-info">
+
 Punjab Board Study Learning App
+
 <br>
+
 Notes • Real Papers Discussion • Important Questions • Exam Preparation
+
 </div>
+
 
 <a class="footer-whatsapp"
 href="https://whatsapp.com/channel/0029Vb8U34dChq6VTHyJBa13"
-target="_blank" rel="noopener">
+target="_blank"
+rel="noopener">
+
 💬 Join Our WhatsApp Channel
+
 </a>
 
+
 <div class="copyright">
-© 2026 Study Notes. All Rights Reserved.
+
+© 2026 My StudyNotes. All Rights Reserved.
+
 </div>
 
 </footer>
 
+
 </body>
-</html>
+    </html>
